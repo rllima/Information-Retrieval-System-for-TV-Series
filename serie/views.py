@@ -42,7 +42,7 @@ def results_page(request):
         if genre_query != None and genre_query != "":
             query['genre'] = genre_query
         if rate_query != None and rate_query != "":
-            query['rate'] = processor.number(rate_query)
+            query['rate'] = processor.number(int(rate_query))
     if query is None:
         return HttpResponseRedirect("/")
     else:

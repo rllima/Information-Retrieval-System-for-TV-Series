@@ -1,9 +1,0 @@
-greys
-gameof 
-golang
-suits
-suima
-samira
-lucas
-luan
-suacara
