@@ -4,11 +4,11 @@ from indexer import processor
 import json
 import os
 
-iFile = index.Frequency() #Basic() ou Positional()
-iFile.load()
-print(iFile.search({'all':['met', 'mother', 'how']}))
+iFile = index.Basic() #Basic() ou Positional()
+# iFile.load()
 # iFile.save(mode='bytecode', serialize=True)
 # print(iFile.search({'resume':['event', 'world','friendship']}))
+# print(iFile.search({'all':['met', 'mother', 'how']}))
 
 # print(iFile.search({'all':['park', 'android']}))
 #
@@ -19,7 +19,6 @@ print(iFile.search({'all':['met', 'mother', 'how']}))
 #     'rate': processor.number(valor),
 #     'genre': ['park', 'android']
 # }
-
 
 # filenames = list(os.walk('database/'))[0][2]
 # filenames = sorted([ int(f[:-5]) for f in filenames if f != '.DS_Store' ])
@@ -42,5 +41,3 @@ print(iFile.search({'all':['met', 'mother', 'how']}))
 #                 words = processor.number(aux)
 #             iFile.insert(filename, attr, words)
 # iFile.save()
-print(iFile.meanDocs())
-print(iFile.sumDocs())
